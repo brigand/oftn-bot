@@ -97,6 +97,8 @@ var Shared = module.exports = {
 		case "node>":
 		case "0.10>":
 		    engine = Sandbox.Node; break;
+		case "nh>":
+		    engine = Sandbox.NodeHarmony; break;
 		case "babel>":
 		case "b>":
 		case "6>":

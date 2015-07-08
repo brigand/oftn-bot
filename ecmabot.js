@@ -16,7 +16,7 @@ var JSBot = function(profile) {
 	this.sandbox = new Sandbox(path.join(__dirname, "ecmabot-utils.js"));
 	this.factoids = new FactoidServer(path.join(__dirname, "ecmabot-factoids.json"));
 	this.caniuse_server = new CanIUseServer;
-	this.executeRegex = /^((?:sm?|v8?|js?|hs?|b|babel|no?d?e?|>>?|>>>>|\|)>)([^>].*)+/;
+	this.executeRegex = /^((?:sm?|v8?|js?|hs?|b|babel|nh|no?d?e?|>>?|>>>>|\|)>)([^>].*)+/;
 
 	Bot.call(this, profile);
 	this.set_log_level(this.LOG_ALL);
