@@ -249,6 +249,12 @@ JSBot.prototype.caniuse = function(context, text) {
 	}
 };
 
-var profile = require("./ecmabot-profile.js");
+var profile;
+if (process.env.ECMABOT_PROFILE) {
+    profile = require(path.join(process.cwd(), process.env.ECMABOT_PROFILE));
+} else {
+    profile = require("./ecmabot-profile.js");
+}
+
 (new JSBot(profile)).init();
 
